@@ -8,3 +8,9 @@ jobs:
         steps:
             - name: Print message
               run: echo "Hello, github actions"
+            - name: Print name
+              run: echo "Sanyam"
+            - name: Print bye
+              run: echo "bye github action"
+
+            
