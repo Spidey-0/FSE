@@ -6,22 +6,18 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Print message
-              run: echo "Hello, github actions"
-            - name: Print name
-              run: echo "Sanyam"
-            - name: Print bye
-              run: echo "bye github action"
+            - name: Checkout code
+              uses : action/checkout@v4
+            - name: list file
+              run: ls
 
     job2:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Print message
-              run: echo "Hey, github actions"
-            - name: Print name
-              run: echo "Sanyam"
-            - name: Print bye
-              run: echo "bye bye github action"
+            - name: Checkout code
+              uses : action/checkout@v4
+            - name: list file
+              run: ls
 
             
