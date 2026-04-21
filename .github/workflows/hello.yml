@@ -1,23 +1,18 @@
-name: my first workflow
-
+name: use action Workflow
 on: push
 jobs:
-    job1:
-        runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
 
-        steps:
-            - name: Checkout code
-              uses : actions/checkout@v4
-            - name: list file
-              run: ls
+      - name: list file
+        run: ls -la
+    
+      - name: setup node
+        uses: actions/setup-node@v4
 
-    job2:
-        runs-on: ubuntu-latest
-
-        steps:
-            - name: Checkout code
-              uses : actions/checkout@v4
-            - name: list file
-              run: ls
-
+      - name: checking node version 
+        run: npm -v
             
